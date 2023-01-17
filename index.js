@@ -14,9 +14,10 @@ window.addEventListener('DOMContentLoaded', function () { //esto hace que lea es
     contenedor.after(boton);
     contenedor.after(boton2);
     contenedor.after(cuadroTexto);
+    contenedor.after("Plazas reservadas: ")
     
 
-
+//acciones botones
     boton.textContent = "reseteo";
     boton2.textContent = "guardar";
     boton.addEventListener('click', resetear );
