@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva butacas</title>
+    <script type="text/javascript"></script><!--Esto lo pongo por el storage-->
+    <style>
+        .cuadrado {
+            width: 25px;
+            height: 25px;
+        }
+        .verde {
+            background-color: green;
+        }
+        .rojo {
+            background-color: red;
+        }
+    </style>
+<script src="./index.js"></script>
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <script>
+            
+            // Crea un elemento <table> y un elemento <tbody>
+            let tabla = document.createElement("table");
+            let tblBody = document.createElement("tbody");
+            // Crea las celdas
+            for (var i = 0; i < 10; i++) {
+                // Crea las hileras de la tabla
+                var hilera = document.createElement("tr");
+                for (var j = 0; j < 20; j++) {
+                    // Crea un elemento <td> y un elemento div, haz que el div 
+                    //sea el contenido de <td>, ubica el elemento <td> al final
+                    // de la hilera de la tabla
+                    var celda = document.createElement("td");
+                    var cuadrado = document.createElement("div");
+                    cuadrado.classList.add('cuadrado')
+                    celda.append(cuadrado);
+                    hilera.append(celda);
+                }
+                // agrega la hilera al final de la tabla (al final del elemento tblbody)
+                tblBody.append(hilera);
+            }
+            // posiciona el <tbody> debajo del elemento <table>
+            tabla.append(tblBody);
+            // appends <table> into <body>
+            contenedor.append(tabla);
+            // modifica el atributo "border" de la tabla y lo fija a "2";
+            tabla.setAttribute("border", "2");
+
+
+        </script>
+        
+
+
+    </div>
+
+
+</body>
+
+</html>
